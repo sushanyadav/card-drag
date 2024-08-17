@@ -31,3 +31,27 @@ body {
     text-wrap: balance;
   }
 }
+
+.animate-ellipsis::after {
+  display: inline-block;
+  animation: dotty steps(1, end) 1350ms infinite;
+  content: "";
+}
+
+@keyframes dotty {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}
